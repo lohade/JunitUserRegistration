@@ -33,6 +33,12 @@ public class UserTesting {
         Assert.assertTrue(email_result);
     }
 
+    @Test
+    public void givenMobile_whenCorrectDigit_returnTrue(){
+        boolean mobile_result=user.mobile_number("91 9730212161");
+        Assert.assertTrue(mobile_result);
+    }
+
 
 
 }

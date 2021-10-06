@@ -23,7 +23,14 @@ public class user {
         pattern=Pattern.compile(email_regex);
         matcher= pattern.matcher(mail);
         return matcher.matches();
-
     }
+
+    public boolean mobile_number(String mobile){
+        String mobile_regex="^[0-9]{2}\\s[0-9]{10}";
+        boolean match=Pattern.matches(mobile_regex,mobile);
+        return match;
+    }
+
+
 
 }
