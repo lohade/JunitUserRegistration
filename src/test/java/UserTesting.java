@@ -21,5 +21,18 @@ public class UserTesting {
         Assert.assertTrue(result_lastname);
     }
 
+    @Test
+    public void givenEmail_whenWrong_returnFalse(){
+        boolean email_result=user.email("abhi..@gmail.com");
+        Assert.assertFalse(email_result);
+    }
+
+    @Test
+    public void givenEmail_whenCorrect_returnTrue(){
+        boolean email_result=user.email("abhi.lohade@gmail.com.in");
+        Assert.assertTrue(email_result);
+    }
+
+
 
 }
