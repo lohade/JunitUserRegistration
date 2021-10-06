@@ -39,6 +39,14 @@ public class UserTesting {
         Assert.assertTrue(mobile_result);
     }
 
+    @Test
+    public void givenPassword_whenCorrect_returnTrue(){
+        boolean password_validation=user.password_Validation("abhishek");
+        Assert.assertTrue(password_validation);
+    }
+
+    @Test
+    public void
 
 
 }

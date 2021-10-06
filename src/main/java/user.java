@@ -31,6 +31,13 @@ public class user {
         return match;
     }
 
+    public boolean password_Validation(String password){
+        String password_regex="^([a-zA-Z]){8,}";
+        pattern=Pattern.compile(password_regex);
+        matcher=pattern.matcher(password);
+        return matcher.matches();
+    }
+
 
 
 }
