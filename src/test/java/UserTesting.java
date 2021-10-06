@@ -41,12 +41,11 @@ public class UserTesting {
 
     @Test
     public void givenPassword_whenCorrect_returnTrue(){
-        boolean password_validation=user.password_Validation("abhishek");
+        boolean password_validation=user.password_Validation("@Abhi@shek@1");
         Assert.assertTrue(password_validation);
     }
 
-    @Test
-    public void
+
 
 
 }
