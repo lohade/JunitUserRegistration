@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class UserTesting {
 
     Scanner scanner=new Scanner(System.in);
-    user user=new user();
+    User user=new User();
     @Test
     public void name_returnTrue(){
         boolean result=user.firstName("Abhishek");

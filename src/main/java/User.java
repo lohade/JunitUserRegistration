@@ -1,7 +1,7 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class user {
+public class User{
 
     Pattern pattern;
     Matcher matcher;
