@@ -1,10 +1,15 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+<<<<<<< HEAD
 import java.util.Scanner;
 
 public class UserTesting {
     Scanner scanner=new Scanner(System.in);
+=======
+public class UserTesting {
+
+>>>>>>> 1c2edf3e876fee6687d4eeeb1eedc0f744b2d87b
     User user=new User();
     @Test
     public void name_returnTrue(){
@@ -14,7 +19,11 @@ public class UserTesting {
 
     @Test
     public void name_whenWrong(){
+<<<<<<< HEAD
         boolean result1=user.firstName("abhish");
+=======
+        boolean result1=user.firstName("abhishek");
+>>>>>>> 1c2edf3e876fee6687d4eeeb1eedc0f744b2d87b
         Assert.assertFalse(result1);
     }
 
@@ -78,9 +87,23 @@ public class UserTesting {
     public void givenPassword3_whenWrong_returnFalse(){
         boolean password3=user.password_rule3("Abhishek");
         Assert.assertFalse(password3);
+<<<<<<< HEAD
     }
 
 
+    @Test
+    public void givenPassword_whenCorrect_returnTrue(){
+        boolean password_validation=user.password_Validation("Abhishek@1");
+        Assert.assertTrue(password_validation);
+=======
+>>>>>>> 1c2edf3e876fee6687d4eeeb1eedc0f744b2d87b
+    }
+
+    @Test
+    public void givenPassword_whenWrong_returnFalse(){
+
+<<<<<<< HEAD
+=======
     @Test
     public void givenPassword_whenCorrect_returnTrue(){
         boolean password_validation=user.password_Validation("Abhishek@1");
@@ -89,7 +112,7 @@ public class UserTesting {
 
     @Test
     public void givenPassword_whenWrong_returnFalse(){
-
+>>>>>>> 1c2edf3e876fee6687d4eeeb1eedc0f744b2d87b
         boolean password_result=user.password_Validation("abhish@10");
         Assert.assertFalse(password_result);
     }

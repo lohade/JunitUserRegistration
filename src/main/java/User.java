@@ -31,6 +31,7 @@ public class User{
         return match;
     }
 
+<<<<<<< HEAD
     public boolean password_rule1(String password){
         String password_regex="^[a-zA-Z]{8,}$";
         pattern=Pattern.compile(password_regex);
@@ -40,11 +41,18 @@ public class User{
 
     public boolean password_rule2(String password){
         String password_regex="^(?=.*[A-Z]){1}(?=.*[a-z]).{8,}$";
+=======
+   
+
+    public boolean password_Validation(String password){
+        String password_regex="^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%!]).{8,}$";
+>>>>>>> 1c2edf3e876fee6687d4eeeb1eedc0f744b2d87b
         pattern=Pattern.compile(password_regex);
         matcher=pattern.matcher(password);
         return matcher.matches();
     }
 
+<<<<<<< HEAD
     public boolean password_rule3(String password) {
         String password_regex = "\"(?=.*[A-Z]){1}(?=.*[0-9])(?=.*[a-z]).{8,}\"";
         pattern = Pattern.compile(password_regex);
@@ -60,4 +68,7 @@ public class User{
         return matcher.matches();
     }
 
+=======
+>>>>>>> 1c2edf3e876fee6687d4eeeb1eedc0f744b2d87b
 }
+
