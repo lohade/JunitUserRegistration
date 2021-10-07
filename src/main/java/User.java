@@ -45,6 +45,12 @@ public class User{
         return matcher.matches();
     }
 
+    public boolean password_rule3(String password) {
+        String password_regex = "\"(?=.*[A-Z]){1}(?=.*[0-9])(?=.*[a-z]).{8,}\"";
+        pattern = Pattern.compile(password_regex);
+        matcher = pattern.matcher(password);
+        return matcher.matches();
+    }
 
 
     public boolean password_Validation(String password){

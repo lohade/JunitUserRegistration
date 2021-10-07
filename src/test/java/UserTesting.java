@@ -67,6 +67,17 @@ public class UserTesting {
         Assert.assertFalse(password2);
     }
 
+    @Test
+    public void givenPassword3_whenCorrect_returnTrue(){
+        boolean password3=user.password_rule3("Abhishek10");
+        Assert.assertTrue(password3);
+    }
+    @Test
+    public void givenPassword3_whenWrong_returnFalse(){
+        boolean password3=user.password_rule3("Abhishek");
+        Assert.assertFalse(password3);
+    }
+
 
     @Test
     public void givenPassword_whenCorrect_returnTrue(){
