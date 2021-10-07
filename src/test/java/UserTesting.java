@@ -1,13 +1,8 @@
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.Assert;
-
-import java.util.Scanner;
-
 
 public class UserTesting {
 
-    Scanner scanner=new Scanner(System.in);
     User user=new User();
     @Test
     public void name_returnTrue(){
@@ -16,9 +11,21 @@ public class UserTesting {
     }
 
     @Test
+    public void name_whenWrong(){
+        boolean result1=user.firstName("abhishek");
+        Assert.assertFalse(result1);
+    }
+
+    @Test
     public void surname_returnTrue(){
         boolean result_lastname=user.lastName("Lohade");
         Assert.assertTrue(result_lastname);
+    }
+
+    @Test
+    public void surname_whenWrong_returnFalse(){
+        boolean surname_result=user.lastName("lohade");
+        Assert.assertFalse(surname_result);
     }
 
     @Test
@@ -40,12 +47,37 @@ public class UserTesting {
     }
 
     @Test
-    public void givenPassword_whenCorrect_returnTrue(){
-        boolean password_validation=user.password_Validation("@Abhi@shek@1");
-        Assert.assertTrue(password_validation);
+    public void givenPassword1_whenCorrect_returnTrue(){
+        boolean password1=user.password_rule1("abhishek");
+        Assert.assertTrue(password1);
+    }
+    @Test
+    public void givenPassword1_whenWrong_returnFalse(){
+        boolean password1=user.password_rule1("abhi");
+        Assert.assertFalse(password1);
+    }
+    @Test
+    public void givenPassword2_whenCorrect_returnTrue(){
+        boolean password2=user.password_rule2("Abhishek");
+        Assert.assertTrue(password2);
+    }
+    @Test
+    public void givenPassword2_whenWrong_returnFalse(){
+        boolean password2=user.password_rule2("abhishek");
+        Assert.assertFalse(password2);
     }
 
 
+    @Test
+    public void givenPassword_whenCorrect_returnTrue(){
+        boolean password_validation=user.password_Validation("Abhishek@1");
+        Assert.assertTrue(password_validation);
+    }
 
+    @Test
+    public void givenPassword_whenWrong_returnFalse(){
+        boolean password_result=user.password_Validation("abhish@10");
+        Assert.assertFalse(password_result);
+    }
 
 }
