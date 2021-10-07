@@ -1,18 +1,20 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-public class UserTesting {
+import java.util.Scanner;
 
+public class UserTesting {
+    Scanner scanner=new Scanner(System.in);
     User user=new User();
     @Test
     public void name_returnTrue(){
-        boolean result=user.firstName("Abhishek");
+        boolean result=user.firstName("Abhi");
         Assert.assertTrue(result);
     }
 
     @Test
     public void name_whenWrong(){
-        boolean result1=user.firstName("abhishek");
+        boolean result1=user.firstName("abhish");
         Assert.assertFalse(result1);
     }
 
@@ -87,6 +89,7 @@ public class UserTesting {
 
     @Test
     public void givenPassword_whenWrong_returnFalse(){
+
         boolean password_result=user.password_Validation("abhish@10");
         Assert.assertFalse(password_result);
     }

@@ -14,7 +14,7 @@ public class User{
 
     }
     public boolean lastName(String name){
-        String surname="^[A-Z]+[a-z]{2,}";
+        String surname="^[A-Z]{1}+[a-z]{2,}";
         return (Pattern.matches(surname,name));
     }
 

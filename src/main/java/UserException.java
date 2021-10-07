@@ -1,7 +1,8 @@
-
+//create a class
 public class UserException extends Exception {
 
     public UserException (String message){
-        super(message);
+    // super use for initialize exception message
+         super(message);
     }
 }
