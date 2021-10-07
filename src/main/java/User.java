@@ -31,6 +31,8 @@ public class User{
         return match;
     }
 
+   
+
     public boolean password_Validation(String password){
         String password_regex="^(?=.*[A-Z]){1}(?=.*[a-z])(?=.*[0-9])(?=.*[@#$%!]).{8,}$";
         pattern=Pattern.compile(password_regex);
@@ -38,6 +40,5 @@ public class User{
         return matcher.matches();
     }
 
-
-
 }
+
